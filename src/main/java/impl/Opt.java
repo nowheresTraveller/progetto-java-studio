@@ -1,9 +1,14 @@
 package impl;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 public class Opt {
     public static void main(String[] args) {
+
+//        ArrayList<String> arr=List.of("A","B");
 
         //Creo un Optional non vuoto
         Optional<Oggetto> oggetto = Optional.of(new Oggetto(2, 3));
@@ -38,4 +43,19 @@ public class Opt {
         System.out.println(secOggetto.map(x -> x.getAltezza()).orElse(0));
 
     }
+
+    public void metodo(){
+        Integer [] vett= {2,3,4,1,0};
+        Integer app;
+        boolean flag=false;
+        for (int i=0; i<vett.length;i++){
+            if(vett[i]>vett[i+1]){
+                app=vett[i];
+                vett[i]=vett[i+1];
+                vett[i+1]=app;
+                flag=true;
+            }
+        }
+    }
+
 }
